@@ -176,7 +176,7 @@ function agregarProducto(){
 function editarProducto() {
   
     let editarProductoID = document.getElementById('editarProductoID').value;
-    
+   
     let data = {
         nombre: document.getElementById('tituloM').value,
         descripcion: document.getElementById('descripcionM').value,
@@ -348,6 +348,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
   let inThumbail = document.getElementById('thumbailM');
   let inPrecio = document.getElementById('precioM');
   let inStock = document.getElementById('stockM');
+  let inEditarProductoID = document.getElementById('editarProductoID');
    
     const url = '/api/productos/'+id;
     let request = {
@@ -366,7 +367,7 @@ myModal.addEventListener('shown.bs.modal', function (event) {
         inThumbail.value = (data.thumbail);
         inPrecio.value = (data.precio);
         inStock.value = (data.stock);
-        //inId.value = (id);
+        inEditarProductoID.value = (id);
     });
 
 })
